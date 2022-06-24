@@ -1,0 +1,30 @@
+@import "./scss/common.scss";
+
+.App {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    @include responsive(tablet) {
+        overflow-y: hidden;
+    }
+}
+
+.Header {
+    background-color: $white;
+    height: 50px;
+}
+
+.graph {
+    min-width: 0;
+    flex: 1;
+}
+
+
+.hide-on-mobile {
+    display: none;
+
+    @include responsive(tablet) {
+        display: table-cell;
+    }
+}

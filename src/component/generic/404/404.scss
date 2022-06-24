@@ -1,0 +1,14 @@
+@import '/src/scss/common.scss';
+
+.Error {
+    display: flex;
+    justify-content: center;
+    background: white;
+    height: 50px;
+    color: $error;
+    align-items: center;
+
+    >span {
+        margin-left: 20px;
+    }
+}

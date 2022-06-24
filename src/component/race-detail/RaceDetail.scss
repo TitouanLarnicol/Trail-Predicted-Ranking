@@ -1,0 +1,37 @@
+@import '../../scss/common.scss';
+
+.raceDetailContainer {
+    display: flex;
+    height: inherit;
+    flex-direction: column;
+}
+
+.raceDetail {
+    display: flex;
+    flex-flow: column-reverse;
+
+    @include responsive(tablet) {
+        flex-direction: row;
+        height: 100%;
+    }
+}
+
+.raceTitle {
+    font-size: large;
+    display: inline-block;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #318CE7;
+
+    span {
+        font-weight: 400;
+    }
+}
+
+.runnersList {
+    @include responsive(tablet) {
+        flex-direction: row;
+        height: 100%;
+        overflow-y: scroll;
+    }
+}

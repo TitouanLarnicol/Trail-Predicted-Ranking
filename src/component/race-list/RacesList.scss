@@ -1,0 +1,20 @@
+@import '/src/scss/common.scss';
+
+.RaceList {
+    display: block;
+    height: inherit;
+    overflow-y: scroll;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    padding: 0 10px 10px 10px;
+}
+
+thead {
+    background-color: $white;
+    position: sticky;
+    top: 0px;
+
+    tr {
+        th {}
+    }
+}

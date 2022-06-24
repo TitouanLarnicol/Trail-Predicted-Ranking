@@ -1,0 +1,16 @@
+@import '/src/scss/common.scss';
+
+.Pastille {
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+}
+
+.Inprogress {
+    background-color: $inProgress;
+}
+
+
+.Completed {
+    background-color: $completed;
+}
