@@ -20,7 +20,9 @@ function Race(props: { race: IRace }) {
                 </div>
             </td>
             <td className="RaceUrl hide-on-mobile"><a href={props.race.url} target="blank"><FaLink></FaLink></a></td>
-            <td className="CheckIcon" onClick={raceClicked}>{props.race.status === 'IN PROGRESS' ? <FaLock /> : <FaRegFolderOpen />}</td>
+            <td>
+                {props.race.status === 'IN PROGRESS' ? <FaLock /> : <FaRegFolderOpen onClick={raceClicked} className="CheckIcon" />}
+            </td>
         </tr>
     )
 }

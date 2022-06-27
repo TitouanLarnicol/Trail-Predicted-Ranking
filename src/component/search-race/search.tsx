@@ -36,17 +36,21 @@ function SearchRace() {
             <form >
                 <div className="row">
                     <div className="u-full-width">
-                        <label >URL of the registration website</label>
-                        <input disabled={loading} className="u-full-width" type="url" placeholder="https://livetrail.com" id="raceId" onChange={onRaceChange} />
+                        <label >URL du site d'inscription</label>
+                        <input disabled={loading} className="u-full-width" type="url" placeholder="https://livetrail.com" id="raceId" onChange={onUrlChange} />
                     </div>
                 </div>
-                <label>Race name</label>
-                <input disabled={loading} className="u-full-width" type="text" placeholder="UTMB" id="urlId" onChange={onUrlChange} />
-                <input disabled={loading} className="button-primary" type="submit" value="Submit" onClick={onSubmit} />
+                <label>Nom de l'épreuve</label>
+                <input disabled={loading} className="u-full-width" type="text" placeholder="UTMB" id="urlId" onChange={onRaceChange} />
+                <input disabled={loading} className="button-primary" type="submit" value="Analyser" onClick={onSubmit} />
             </form>
             {
                 error ? <Error errorId={error} /> : null
             }
+            <div className="Helper">
+                Pour l'instant, seuls les sites <a target="blank" href={"https://livetrack.me/fr/evenements"}>live track</a> et <a target="blank" href={"https://www.livetrail.net/"}>live trail</a> sont
+                disponibles. N'hésitez pas à m'envoyer les plateformes à ajouter via <a href="mailto:larnicol.titouan.38@gmail.com">mail</a>.
+            </div>
         </div>
     )
 }

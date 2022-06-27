@@ -1,10 +1,11 @@
-import { Fragment, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { useLocation, useParams } from "react-router-dom"
 import { getRunnersFromRace } from "../../api/api";
 import Chart from "./Chart";
 import Runner from "./runners/Runner";
 import './RaceDetail.scss';
 import { IRunner } from "../../models/IRunner";
+import { Content } from "../generic/loader/Content";
 
 function RaceDetail() {
     const search = useLocation().search;
@@ -15,7 +16,6 @@ function RaceDetail() {
 
     useEffect(() => {
         async function fetchRace() {
-            setLoading(true);
             const result = await getRunnersFromRace(id!, url!);
             setRunners(mapResults(result.data))
             setLoading(false);
@@ -33,30 +33,23 @@ function RaceDetail() {
     }
 
     return (
-        <Fragment>
-            {
-                loading ?
-                    (<div>
-                        Loading
-                    </div>)
-                    :
-                    <div className="raceDetailContainer">
-                        <div className="raceTitle">
-                            <span>{id}</span>
-                        </div>
-                        <div className="raceDetail">
-                            <div className="runnersList">
-                                {
-                                    runners.map((runner, index) => (
-                                        <Runner key={index} runner={runner} index={index}></Runner>
-                                    ))
-                                }
-                            </div>
-                            <Chart data={runners} />
-                        </div>
+        <Content loading={loading}>
+            <div className="raceDetailContainer">
+                <div className="raceTitle">
+                    <span>{id}</span>
+                </div>
+                <div className="raceDetail">
+                    <div className="runnersList">
+                        {
+                            runners.map((runner, index) => (
+                                <Runner key={index} runner={runner} index={index}></Runner>
+                            ))
+                        }
                     </div>
-            }
-        </Fragment>
+                    <Chart data={runners} />
+                </div>
+            </div>
+        </Content>
     )
 }
 

@@ -7,6 +7,7 @@ import RaceList from './component/race-list/RaceList';
 import { Error } from './component/generic/404/404';
 import RaceDetail from './component/race-detail/RaceDetail';
 import { ErrorId } from './component/generic/ErrorId';
+import { Home } from './component/home/Home';
 
 function App() {
   return (
@@ -15,8 +16,9 @@ function App() {
         <Route path='/' element={<Menu />}>
           <Route path="/race/:id" element={<RaceDetail />} />
           <Route path="/search" element={<SearchRace />} />
+          <Route path='/racelist' element={<RaceList />} />
           <Route path='*' element={<Error errorId={ErrorId.FORBIDDEN} />} />
-          <Route index element={<RaceList />} />
+          <Route index element={<Home />} />
         </Route>
       </Routes>
     </div>

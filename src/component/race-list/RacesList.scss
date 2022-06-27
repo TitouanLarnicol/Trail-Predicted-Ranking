@@ -33,7 +33,8 @@ table thead {
     /* head takes the height it requires, 
     and it's not scaled when table is resized */
     flex: 0 0 auto;
-    width: calc(100% - 0.9em);
+    width: calc(100% - 0.2em);
+    border-bottom: 2px solid $lightBlue;
 }
 
 table tbody {
@@ -63,5 +64,5 @@ th:first-child,
 th:last-child,
 td:last-child,
 td:first-child {
-    padding: 20px;
+    padding: 10px;
 }

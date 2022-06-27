@@ -15,6 +15,16 @@
     }
 }
 
+.Title {
+    label:hover {
+        cursor: pointer;
+    }
+}
+
+.Title {
+    cursor: pointer;
+}
+
 .Center {
     justify-content: center;
     min-height: inherit;
@@ -71,7 +81,14 @@
 .Content {
     flex: 1;
     background-color: $background-light;
+}
+
+.AddPadding {
     padding: 10px;
+}
+
+.BgBlue {
+    background-color: $lightBlue;
 }
 
 @include responsive(tablet) {
@@ -79,8 +96,12 @@
         margin-bottom: 0px;
     }
 
-    .Content {
+    .AddPadding {
         padding: 40px;
+    }
+
+
+    .Content {
         height: 100%;
         overflow: hidden;
     }

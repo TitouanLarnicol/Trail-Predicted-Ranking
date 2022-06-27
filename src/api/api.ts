@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const baseUrl: string = "https://warm-shore-58795.herokuapp.com/api/";
+// const baseUrl: string = "http://localhost:5000/api/";
 
 export const getRunnersFromRace = (raceName: string, url: string) => axios.create({
     baseURL: baseUrl 
