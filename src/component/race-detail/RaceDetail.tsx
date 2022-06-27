@@ -42,7 +42,7 @@ function RaceDetail() {
                     :
                     <div className="raceDetailContainer">
                         <div className="raceTitle">
-                            {id} - <span>Classement provisoire</span>
+                            <span>{id}</span>
                         </div>
                         <div className="raceDetail">
                             <div className="runnersList">

@@ -28,7 +28,7 @@ export const options = {
         },
         title: {
             display: true,
-            text: 'Chart.js Bar Chart',
+            text: 'Répartition des coureurs en fonction de la côte itra',
         },
     },
 };
@@ -37,13 +37,7 @@ const labels = ['400', '500', '600', '700', '800'];
 
 export const test = {
     labels,
-    datasets: [
-        {
-            label: 'Dataset 1',
-            data: labels.map(() => [1]),
-            backgroundColor: 'rgba(255, 99, 132, 0.5)',
-        }
-    ],
+    datasets: [],
 };
 
 const RunnerChart = ({ data }: { data: IRunner[] }) => {
@@ -55,9 +49,11 @@ const RunnerChart = ({ data }: { data: IRunner[] }) => {
                 labels,
                 datasets: [
                     {
-                        label: 'Runner\'s itra',
+                        label: 'Nombre de coureurs : ',
                         data: getContent(runners),
-                        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+                        backgroundColor: 'rgba(163, 192, 246, 0.5)',
+                        // backgroundColor: 'rgba(222, 94, 131, 0.3)',
+                        // backgroundColor: 'rgba(218, 105, 43, 0.7)',
                     }
                 ],
             };

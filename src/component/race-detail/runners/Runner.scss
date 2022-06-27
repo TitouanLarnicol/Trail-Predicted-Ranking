@@ -1,0 +1,32 @@
+@import '../../../scss/common.scss';
+
+.Runner {
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .Rank {
+        font-weight: bold;
+    }
+
+    .Name {
+        color: grey;
+        margin-left: 5px;
+    }
+
+    .Age {
+        color: grey;
+        font-size: 1.2rem;
+    }
+
+    .Itra {
+        color: $blue;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+}

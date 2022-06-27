@@ -1,4 +1,4 @@
-import { FaLock, FaRegFolderOpen } from "react-icons/fa";
+import { FaLink, FaLock, FaRegFolderOpen } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { IRace } from "../../../models/IRace";
 import Status from "../../generic/Status/Status";
@@ -19,7 +19,7 @@ function Race(props: { race: IRace }) {
                     <span>{props.race.status}</span>
                 </div>
             </td>
-            <td className="RaceUrl hide-on-mobile"><a href={props.race.url} target="blank">click me</a></td>
+            <td className="RaceUrl hide-on-mobile"><a href={props.race.url} target="blank"><FaLink></FaLink></a></td>
             <td className="CheckIcon" onClick={raceClicked}>{props.race.status === 'IN PROGRESS' ? <FaLock /> : <FaRegFolderOpen />}</td>
         </tr>
     )
